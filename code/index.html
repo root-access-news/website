@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ...
+    <script src="scripts.js"></script>
+    ...
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    ...
+    <div id="terminal">
+        <div id="terminal-toolbar">
+            <svg height="10" width="100">
+                <circle cx="5" cy="5" r="4.5" fill="#fb2f23" />
+                <circle cx="20" cy="5" r="4.5" fill="#ffcc00" />
+                <circle cx="35" cy="5" r="4.5" fill="#61c005" />
+            </svg>
+        </div>
+        <div id="terminal-output">Welcome to #rootaccess<br /><br /></div>
+        <div id="terminal-input"></div>
+    </div>
+
+    ...
+
+    <script>
+        initTerminal();
+        setTimeout(sloganAnimation, 300);
+    </script>
+</body>
+</html>

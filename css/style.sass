@@ -1,0 +1,300 @@
+\:root
+    --color-primary: #0083C9
+    --color-white: #fff
+    --color-grey: #A2B0B8
+    --color-grey-light: #e0e0e0
+    --color-hero: #17A4EF
+    --hero-green: #00C838
+    --hero-purple: #6A76AF
+    --hero-grey: #777777
+    --bg-header: #1B1D3A
+    --bg-grey: #282D50
+    --window-hero: #24284B
+    --window-head: #032671
+    --window-body: #133468
+    --window-color: #839494
+    --window-green: #2BD0C4
+    --window-blue: #1B90EB
+    --window-red: #CC3625
+    --position-top: auto
+    --position-left: auto
+    --position-right: auto
+    --position-bottom: auto
+    --position-y: 0
+    --position-x: 0
+    --footer: #0F0825
+    --footer-copyright: #B0C5D1
+html
+    font-size: 16px
+body
+    font-family: 'Inter', monospace
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
+    background: var(--bg-header)
+code,
+pre
+    font-family: Hack, monospace
+.bg
+    &-header
+        background-color: var(--bg-header)
+    &-grey
+        background-color: var(--bg-grey)
+    &-wHero
+        background-color: var(--window-hero)
+    &-wHead
+        background-color: var(--window-head)
+    &-wBody
+        background-color: var(--window-body)
+    &-primary
+        background-color: var(--color-primary)
+    &-footer
+        background-color: var(--footer)
+.text
+    &-primary
+        color: var(--color-primary)
+    &-hero
+        color: var(--color-hero)
+    &-grey
+        color: var(--color-grey)
+    &-greyLight
+        color: var(--color-grey-light)
+    &-window
+        color: var(--window-color)
+    &-wGreen
+        color: var(--window-green)
+    &-wBlue
+        color: var(--window-blue)
+    &-wRed
+        color: var(--window-red)
+    &-copyright
+        color: var(--footer-copyright)
+    &-heroGreen
+        color: var(--hero-green)
+    &-heroPurple
+        color: var(--hero-purple)
+    &-heroGrey
+        color: var(--hero-grey)
+.border
+    &-primary
+        border-color: var(--color-primary)
+    &-white
+        border-color: var(--color-white)
+    &-grey
+        border-color: var(--color-grey)
+    &-greyLight
+        border-color: var(--color-grey-light)
+.header
+    &_menu
+        span
+            background-color: var(--color-grey-light)
+            height: 4px
+            width: 2rem
+            position: relative
+            transition: all .5s ease
+            border-radius: 3px
+            &::before,
+            &::after
+                content: ''
+                transition: all .5s ease
+                position: absolute
+                inset: 0
+                width: 100%
+                background-color: var(--color-grey-light)
+                height: 4px
+                border-radius: 3px
+                // left: auto
+                // opacity: .6
+            &::before
+                transform: rotate(0) translateY(-10px)
+            &::after
+                transform: rotate(0) translateY(10px)
+        &.--active
+            span
+                transform: rotate(45deg)
+                height: 5px
+                &::before,
+                &::after
+                    opacity: .3
+                    width: 100%
+                    height: 5px
+                &::before
+                    transform: rotate(-90deg) translateY(0)
+                &::after
+                    transform: rotate(-90deg) translateY(0)
+    &_nav
+        transition: all .5s ease
+        // transform: translateX(5rem)
+        // opacity: 0
+        &.--active
+            transform: translateX(0)
+            opacity: 1
+        &_list
+            a
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    top: auto
+                    height: 2px
+                    width: 0px
+                    opacity: 0
+                    margin-left: auto
+                    margin-right: auto
+                    background-color: var(--color-primary)
+                    transition: all .3s ease
+                &:hover
+                    color: var(--color-primary)
+                    &::after
+                        width: 100%
+                        bottom: -.5rem
+                        opacity: 1
+
+a
+    transition: all .5s ease
+.arrow,
+.ornament
+    position: absolute
+    top: var(--position-top)
+    left: var(--position-left)
+    bottom: var(--position-bottom)
+    right: var(--position-right)
+    z-index: 0
+
+.section
+    &--why,
+    &--hero
+        background: var(--bg-grey)
+        // background-image: url('../img/bg-hero.png'), linear-gradient(110.87deg, #0F0825 0%, #282D50 153.33%)
+        background-image: url('../img/bg-hero.jpg')
+        background-size: cover
+        background-position: top
+        background-repeat: no-repeat
+    &--why
+        // background-image: url('../img/bg-why.png'), linear-gradient(114.41deg, #0F0825 -0.67%, #0F1D3D 100%)
+        background-image: url('../img/bg-why.jpg')
+    &_item
+        &--window
+            max-width: 600px
+            width: 100%
+.form
+    &--newsletter
+        .form
+            &_input
+                background-color: rgba(255, 255, 255, .05)
+                border: 1px solid rgba(255,255,255,0.1)
+                border-right-width: 0
+.window
+    &--hero
+        filter: drop-shadow(16px 24px 64px rgba(15, 8, 37, 0.2))
+        border: 1px solid var(--window-hero)
+        .window
+            &_body
+                background: linear-gradient(180deg, #1B1D3A 0%, rgba(27, 29, 58, 0) 100%)
+                // height: 380px
+                code
+                    font-family: 'Source Code Pro', 'Hack'
+.footer
+    &_copyright
+        border-top: 2px solid rgba(255, 255, 255, 0.05)
+.items-end
+    align-items: flex-end
+.ornament
+    &_list
+        font-size: 13px
+        transform: translateX(var(--position-x)) translateY(var(--position-y))
+        &--s
+            width: 336px
+        &--m
+            width: 387px
+        &--l
+            width: 448px
+        .window
+            &_head
+                background-color: #0c1740
+                border-color: rgba(0,0,0,.3)
+            &_body
+                background-color: #10193d
+                border-color: rgba(0,0,0,.3)
+#terminal
+    height: 330px
+    margin: auto
+    // padding: 10px 20px
+    // margin-top: 50px
+    // margin-bottom: 60px
+    border-radius: 10px
+    position: relative
+    &-output
+        // margin-top: 10px
+        overflow: hidden
+        max-height: calc(100% - 25px)
+        max-width: 100%
+        white-space: pre-wrap
+        display: block
+    &-input::after
+        padding: 0
+        content: ""
+        display: inline-block
+        background-color: var(--color-grey-light)
+        vertical-align: top
+        transform: translateY(.25rem)
+        width: 0.55em
+        height: 1.1em
+        animation: blink 1.3s step-end infinite
+
+@-webkit-keyframes blink
+    0%
+        opacity: 1.0
+    50%
+        opacity: 0.0
+    100%
+        opacity: 1.0
+
+@keyframes blink
+    0%
+        opacity: 1.0
+    50%
+        opacity: 0.0
+    100%
+        opacity: 1.0
+
+@media screen and ( min-width: 700px )
+    #terminal
+        height: 390px
+    // .window
+    //     &--hero
+    //         .window
+    //             &_body
+                    // height: 425px
+@media screen and ( min-width: 1025px )
+    .arrow
+        &--around
+            --position-left: 41% !important
+    
+@media screen and ( min-width: 1280px )
+    .arrow
+        &--top1
+            --position-left: 11% !important
+        &--top2
+            --position-left: 44% !important
+        &--top3
+            --position-left: 51% !important
+        &--bot1
+            --position-left: 22% !important
+        &--bot2
+            --position-left: 20% !important
+        &--bot3
+            --position-left: -47% !important
+        &--around
+            --position-left: 53% !important
+    .window
+        &--top
+            max-width: 722px
+            transform: translateX(-2rem)
+        &--bottom
+            max-width: 447px
+            transform: translateX(2.5rem)
+    .why
+        font-size: 22px
